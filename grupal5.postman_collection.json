@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "4f55123e-aab9-4ef2-917f-466e86973145",
+		"name": "grupal5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21934336"
+	},
+	"item": [
+		{
+			"name": "paciente",
+			"item": [
+				{
+					"name": "crear paciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Carlos\",\n    \"rut\": \"12.111.111-0\",\n    \"direccion\": \"El bosque 55\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/paciente"
+					},
+					"response": []
+				},
+				{
+					"name": "obtener paciente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/paciente/1"
+					},
+					"response": []
+				},
+				{
+					"name": "obtener todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/paciente"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/paciente/1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Pablito\",\n    \"rut\": \"11.111.111-2\",\n    \"direccion\": \"Los Placeres 127\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/paciente/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "medico",
+			"item": [
+				{
+					"name": "crear medico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Sergio\",\n    \"rut\": \"11.111.111-8\",\n    \"direccion\": \"Manuel Cordova\",\n    \"EspecialidadId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/medico"
+					},
+					"response": []
+				},
+				{
+					"name": "obtener todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/medico"
+					},
+					"response": []
+				},
+				{
+					"name": "obtener medico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/medico/1"
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar medico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Pablito\",\n    \"rut\": \"11.111.111-2\",\n    \"direccion\": \"Los Placeres 127\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/medico/1"
+					},
+					"response": []
+				},
+				{
+					"name": "borrar medico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/medico/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "especialidad",
+			"item": [
+				{
+					"name": "crear especialdad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"codigo\": \"A1\",\n    \"descripcion\": \"Pediatra\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/especialidad"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "consulta",
+			"item": [
+				{
+					"name": "crear consulta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha\": \"2023-12-05\",\n    \"hora\": \"09:00:00\",\n    \"numero_box\": 2,\n    \"MedicoId\": 1,\n    \"PacienteId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/consulta"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Licencia",
+			"item": [
+				{
+					"name": "crear licencia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"diagnostico\": \"Pura flojera\",\n    \"fecha_inicio\": \"2023-07-05\",\n    \"fecha_termino\": \"2053-07-05\",\n    \"MedicoId\": 1,\n    \"PacienteId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/licencia"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
